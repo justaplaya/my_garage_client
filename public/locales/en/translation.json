@@ -1,0 +1,73 @@
+{
+  "links": {
+    "garage": "Garage",
+    "incidents": "Incidents"
+  },
+  "incidents": {
+    "incidents": "incidents",
+    "types": {
+      "evacuation": "evacuation",
+      "violation": "violation",
+      "crash": "crash"
+    },
+    "periods": {
+      "week": "week",
+      "month": "month",
+      "year": "year"
+    }
+  },
+  "sortOptions": {
+    "0": "No sorting",
+    "1": "Brand A -> Z",
+    "2": "Brand Z -> A",
+    "3": "Model A -> Z",
+    "4": "Model Z -> A",
+    "5": "Release year 0 -> 1",
+    "6": "Release year 1 -> 0",
+    "7": "Max speed 0 -> 1",
+    "8": "Max speed 1 -> 0",
+    "9": "Seconds up to 100 km/h 0 -> 1",
+    "10": "Seconds up to 100 km/h 1 -> 0"
+  },
+  "components": {
+    "bottomRow": {
+      "apply": "Apply",
+      "close": "Close"
+    },
+    "select": {
+      "placeholder": "Pick from the list"
+    },
+    "createUpdateCarModal": {
+      "brand": "Brand",
+      "model": "Model",
+      "year": "Release year",
+      "maxSpeed": "Max speed",
+      "timeUpTo100": "Seconds up to 100 km/h",
+      "create": "Create",
+      "update": "Update"
+    }
+  },
+  "pages": {
+    "garage": {
+      "main": {
+        "create": "Create",
+        "search": "Search by brand or model",
+        "404SearchTop": "Nothing found by query",
+        "404SearchBottom": "Try to enter another one",
+        "404AllTop": "No cars found",
+        "404AllBottomStatic": "Try to",
+        "404AllBottomInteractive": "add one"
+      },
+      "car": {
+        "back": "Back",
+        "edit": "Edit",
+        "delete": "Delete",
+        "year": "Release year",
+        "maxSpeed": "Max speed",
+        "timeUpTo100": "Seconds up to 100 km/h",
+        "kmPerHour": "km/h",
+        "seconds": "sec."
+      }
+    }
+  }
+}
