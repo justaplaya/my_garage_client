@@ -46,7 +46,7 @@
     "script-start": "react-scripts start",
     "build": "webpack --mode production",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "start-on-server": "node server.js"
   },
   "browserslist": {
     "production": [
