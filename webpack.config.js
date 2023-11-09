@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const webpack = require('webpack');
 
@@ -8,7 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'), // the bundle output path
     filename: 'bundle.js', // the name of the bundle
-    publicPath: '/',
+    // publicPath: '/',
   },
   target: 'web',
   plugins: [
@@ -17,6 +18,9 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       process: 'process/browser',
+    }),
+    new CopyPlugin({
+      patterns: [{ from: 'public/assets', to: 'assets/' }],
     }),
     // new webpack.DefinePlugin({
     //   'process.env': JSON.stringify(process.env),
@@ -55,7 +59,7 @@ module.exports = {
       {
         test: /\.(png|gif|woff|woff2|eot|ttf|webp)$/, // to import images and fonts
         loader: 'url-loader',
-        options: { limit: 1 },
+        options: { limit: 1, name: 'assets/[hash].[ext]' },
       },
       {
         test: /\.svg$/,
