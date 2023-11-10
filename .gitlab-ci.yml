@@ -1,0 +1,17 @@
+image: node:16.16.0
+
+stages:
+  - build
+  - test
+
+build-job:
+  stage: build
+  script:
+    npm run build
+
+test-job:
+  stage: test
+  script:
+    npm test
+  dependencies:
+    - build-job

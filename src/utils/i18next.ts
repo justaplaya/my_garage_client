@@ -13,7 +13,6 @@ i18next
   .use(I18nextBrowserLanguageDetector)
   .use(initReactI18next)
   .init({
-    // keySeparator: '.',
     resources,
     fallbackLng: 'ru', // дефолтный язык
     supportedLngs: ['ru', 'en'], // поддерживаемые языки
@@ -23,12 +22,6 @@ i18next
     react: {
       useSuspense: true,
     },
-    // backend: {
-    //   loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`,
-    // },
-    // backend: {
-    //   loadPath: '/locales/{{lng}}/{{ns}}.json',
-    // },
     returnNull: false,
   });
 export default i18next;
